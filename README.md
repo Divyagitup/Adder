@@ -42,14 +42,33 @@ Carry = AB + ACin+BCin
 
 
 ## Program:
-
+module exp3a(a,b,sum,carry);
+input a,b;
+output sum,carry;
+xor(sum,a,b);
+and(carry,a,b);
+endmodule
+module exp3b(a,b,c,sum,carry);
+input a,b,c;
+output sum,carry;
+wire x,p,q,r;
+xor(sum,x);
+and(p,a,b);
+and(q,b,c);
+and(r,a,c);
+or(carry,p,q,r);
+endmodule
 
 ## RTL Schematic:
+<img width="386" alt="exp3adia" src="https://github.com/Divyagitup/Adder/assets/134514564/d6220f63-7c39-4487-9874-4948cfc55ba6">
+<img width="347" alt="exp3bdia" src="https://github.com/Divyagitup/Adder/assets/134514564/e9941e5b-f14f-4310-8aa4-d9c1205faa3d">
 
 
 
 
 ## Timing Diagram:
+<img width="610" alt="exp3aout" src="https://github.com/Divyagitup/Adder/assets/134514564/47210b5c-c0b1-45ea-ad2d-c759390b2d6c">
+<img width="803" alt="exp3bout" src="https://github.com/Divyagitup/Adder/assets/134514564/4a663a0a-5f1e-472e-966a-73b71f914733">
 
 
 ## Result:
