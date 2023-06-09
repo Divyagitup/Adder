@@ -42,12 +42,15 @@ Carry = AB + ACin+BCin
 
 
 ## Program:
+~~~
 module exp3a(a,b,sum,carry);
 input a,b;
 output sum,carry;
 xor(sum,a,b);
 and(carry,a,b);
 endmodule
+~~~
+~~~
 module exp3b(a,b,c,sum,carry);
 input a,b,c;
 output sum,carry;
@@ -58,6 +61,7 @@ and(q,b,c);
 and(r,a,c);
 or(carry,p,q,r);
 endmodule
+~~~
 
 ## RTL Schematic:
 <img width="386" alt="exp3adia" src="https://github.com/Divyagitup/Adder/assets/134514564/d6220f63-7c39-4487-9874-4948cfc55ba6">
